@@ -46,14 +46,6 @@ namespace Lights
         }
         public void OnRoundStarted()
         {
-            Timing.CallDelayed(10f, () =>
-            {
-                foreach(Player player in Player.List)
-                {
-                    player.TeleportToRoom(RoomType.Surface);
-                    Log.Info(player.Position);
-                }
-            });
             foreach(var list in CustomConfig.MakingLights)
             {
                 Color needColor;
